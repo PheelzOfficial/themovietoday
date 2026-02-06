@@ -45,9 +45,17 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
-                    <p className="text-gray-600 text-xs">
-                        © 2026 TheMovieToday. All rights reserved. Built for creators.
-                    </p>
+                    <div className="flex flex-col gap-2">
+                        <p className="text-gray-600 text-xs">
+                            © 2026 TheMovieToday. All rights reserved. Built for creators.
+                        </p>
+                        <div className="flex items-center gap-2">
+                            <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="TMDB Logo" className="h-8 w-8" />
+                            <p className="text-gray-600/50 text-[10px]">
+                                This product uses the TMDB API but is not endorsed or certified by TMDB.
+                            </p>
+                        </div>
+                    </div>
                     <div className="flex gap-6">
                         <Link to="/legal/terms" className="text-gray-600 hover:text-white text-xs">Terms</Link>
                         <Link to="/legal/privacy" className="text-gray-600 hover:text-white text-xs">Privacy</Link>
