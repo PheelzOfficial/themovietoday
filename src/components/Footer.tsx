@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PlayIcon } from './Icons';
 
 export const Footer: React.FC = () => {
     const links = [
@@ -13,8 +14,14 @@ export const Footer: React.FC = () => {
             <div className="container mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-2 md:col-span-1">
-                        <Link to="/" className="text-xl font-black tracking-tighter neon-text italic mb-6 inline-block">
-                            THEMOVIETODAY
+                        <Link to="/" className="flex items-center gap-2 group decoration-none mb-6">
+                            <div className="relative p-1.5 rounded-full border border-white/10 bg-zinc-900/50">
+                                <PlayIcon size={20} className="text-primary fill-primary/20" />
+                            </div>
+                            <div className="text-xl font-black tracking-tighter italic leading-none">
+                                <span className="text-white">THEMOVIE</span>
+                                <span className="text-primary neon-text">TODAY</span>
+                            </div>
                         </Link>
                         <p className="text-gray-500 text-sm max-w-xs">
                             Streaming service offering movies, TV shows, and more on thousands of internet-connected devices.
@@ -39,7 +46,7 @@ export const Footer: React.FC = () => {
 
                 <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
                     <p className="text-gray-600 text-xs">
-                        © 2026 THEMOVIETODAY. All rights reserved. Built for creators.
+                        © 2026 TheMovieToday. All rights reserved. Built for creators.
                     </p>
                     <div className="flex gap-6">
                         <Link to="/legal/terms" className="text-gray-600 hover:text-white text-xs">Terms</Link>

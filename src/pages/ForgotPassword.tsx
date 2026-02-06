@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
-import { ChevronLeftIcon } from '../components/Icons';
+import { ChevronLeftIcon, PlayIcon } from '../components/Icons';
 
 const ForgotPassword: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -23,7 +23,15 @@ const ForgotPassword: React.FC = () => {
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="max-w-md w-full glass p-8 md:p-12 rounded-3xl border-white/5 shadow-2xl">
         <div className="text-center mb-10">
-          <Link to="/" className="inline-block text-3xl font-black neon-text italic mb-12">THEMOVIETODAY</Link>
+          <Link to="/" className="inline-flex items-center justify-center gap-2 mb-8 group decoration-none">
+            <div className="relative p-2 rounded-full border border-white/10 bg-zinc-900/50">
+              <PlayIcon size={24} className="text-primary fill-primary/20" />
+            </div>
+            <div className="text-2xl font-black tracking-tighter italic leading-none">
+              <span className="text-white">THEMOVIE</span>
+              <span className="text-primary neon-text">TODAY</span>
+            </div>
+          </Link>
           <h1 className="text-3xl font-black mb-4 uppercase italic">Reset Password</h1>
           <p className="text-gray-400">Enter your email and we'll send a magic link to get you back in.</p>
         </div>

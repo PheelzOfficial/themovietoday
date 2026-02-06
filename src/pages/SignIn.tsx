@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
+import { PlayIcon } from '../components/Icons';
 import { cn } from '../lib/utils'; // Keep cn in this file if imports fail or use local
 
 const SignIn: React.FC = () => {
@@ -34,8 +35,14 @@ const SignIn: React.FC = () => {
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       <div className="relative z-10 w-full max-w-md p-8 md:p-16 bg-black/80 rounded-xl shadow-2xl border border-white/10">
-        <Link to="/" className="block text-3xl font-black text-center mb-8 neon-text italic tracking-tighter">
-          THEMOVIETODAY
+        <Link to="/" className="flex items-center justify-center gap-3 mb-8 group decoration-none">
+          <div className="relative p-2 rounded-full border border-white/10 bg-zinc-900/50">
+            <PlayIcon size={32} className="text-primary fill-primary/20" />
+          </div>
+          <div className="text-3xl font-black tracking-tighter italic leading-none">
+            <span className="text-white">THEMOVIE</span>
+            <span className="text-primary neon-text">TODAY</span>
+          </div>
         </Link>
 
         <h2 className="text-3xl font-bold mb-8">Sign In</h2>

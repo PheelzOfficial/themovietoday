@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
-import { SearchIcon, BellIcon, MenuIcon, CrossIcon } from './Icons';
+import { SearchIcon, BellIcon, MenuIcon, CrossIcon, PlayIcon } from './Icons';
 import { Button } from './Button';
 import { cn } from '../lib/utils';
 
@@ -36,8 +36,14 @@ export const Navbar: React.FC = () => {
         )}>
             <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
                 <div className="flex items-center gap-10">
-                    <Link to="/" className="text-2xl font-black tracking-tighter neon-text italic">
-                        THEMOVIETODAY
+                    <Link to="/" className="flex items-center gap-2 group decoration-none">
+                        <div className="relative">
+                            <PlayIcon size={28} className="text-primary fill-primary/20 group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div className="text-2xl font-black tracking-tighter italic leading-none">
+                            <span className="text-white group-hover:text-gray-200 transition-colors">THEMOVIE</span>
+                            <span className="text-primary neon-text">TODAY</span>
+                        </div>
                     </Link>
 
                     <div className="hidden lg:flex items-center gap-6">
